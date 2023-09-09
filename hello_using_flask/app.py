@@ -10,3 +10,8 @@ def index():
     else:
         name = "World"
     return render_template("index.html", name=name)
+
+
+@app.route("/greet")
+def greet():
+    return render_template("greet.html", name=request.args.get("name", "World"))
