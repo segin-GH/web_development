@@ -1,0 +1,22 @@
+body {
+    padding: 10%;
+    font-size: 2rem;
+}
+
+input,
+button {
+    font: inherit;
+}
+
+p {
+    text-indent: 2em;
+    text-decoration: none;
+    text-transform: lowercase;
+    text-align: justify;
+    line-height: 1.5;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.1rem;
+    font-weight: normal;
+    font-style: normal;
+    font-family: cursive;
+}
