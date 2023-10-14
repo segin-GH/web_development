@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    font-size: 20px;
+    padding: 10px;
+}
+.columns {
+/*     column-count: 4; 
+    column-width: 200px; */
+    columns: 4 200px; /* short hand for the above */
+    column-rule: 2px solid #ccc;
+    column-gap: 40px;
+
+}
+
+.columns h2 {
+    margin-top: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.columns .quote {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    break-inside: avoid; /* prevents a quote from being split between columns */
+    font-style: italic;
+    font-size: 24px;
+    text-align: center;
+    column-span: all; /* forces a quote to span all columns */
+
+}
+
+.nowrap {
+    white-space: nowrap;
+}
