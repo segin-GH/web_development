@@ -79,9 +79,7 @@ body {
 } */
 
 html {
-
     scroll-behavior: smooth;
-
 }
 
 section {
@@ -119,12 +117,10 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
-    /* space the text equal space */
 }
 
 a:visted {
     color: white;
-
 }
 
 .social {
