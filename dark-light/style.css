@@ -1,0 +1,28 @@
+:root[data-theme="light"] {
+    --text: #3d3d3d;
+    --background: #ebeaea;
+    --primary: #333d33;
+    --secondary: #d6d6d6;
+    --accent: #51ad00;
+}
+
+:root[data-theme="dark"] {
+    --text: #c2c2c2;
+    --background: #151414;
+    --primary: #c2ccc2;
+    --secondary: #292929;
+    --accent: #a3ff52;
+}
+
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
