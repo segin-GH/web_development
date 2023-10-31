@@ -1,19 +1,18 @@
-:root[data-theme="light"] {
-    --text: #3d3d3d;
+:root {
+    --text: #000000;
     --background: #ebeaea;
     --primary: #333d33;
     --secondary: #d6d6d6;
     --accent: #51ad00;
 }
 
-:root[data-theme="dark"] {
-    --text: #c2c2c2;
+body[data-theme="dark"] {
+    --text: #000000;
     --background: #151414;
     --primary: #c2ccc2;
     --secondary: #292929;
-    --accent: #a3ff52;
+    --accent: #5bbd04;
 }
-
 
 body {
     background-color: var(--background);
@@ -21,8 +20,15 @@ body {
 }
 
 .theme-toggle {
+    display: flex;
     position: fixed;
-    top: 1rem;
-    right: 1rem;
+    top: 45%;
+    left: 50%;
+    background-color: var(--accent);
+    border: 5px solid var(--primary);
+    color: var(--text);
+    padding: 10px 20px;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }

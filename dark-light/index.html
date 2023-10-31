@@ -5,54 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Theme Toggle</title>
-  <style>
-    :root {
-      --text: #000000;
-      --background: #ebeaea;
-      --primary: #333d33;
-      --secondary: #d6d6d6;
-      --accent: #51ad00;
-    }
-
-    body[data-theme="dark"] {
-      --text: #000000;
-      --background: #151414;
-      --primary: #c2ccc2;
-      --secondary: #292929;
-      --accent: #5bbd04;
-    }
-
-    body {
-      background-color: var(--background);
-      color: var(--text);
-    }
-
-    .theme-toggle {
-      display: flex;
-      position: fixed;
-      top: 45%;
-      left: 50%;
-      background-color: var(--accent);
-      border: 5px solid var(--primary);
-      color: var(--text);
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body data-theme="light">
   <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
 
-  <script>
-    function toggleTheme() {
-      const currentTheme = document.body.getAttribute('data-theme');
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      document.body.setAttribute('data-theme', newTheme);
-    }
-  </script>
 </body>
+<script src="script.js"></script>
 
 </html>
