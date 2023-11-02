@@ -80,11 +80,17 @@ button:hover {
     min-height: 800px;
     max-height: 800px;
     overflow-y: scroll;
+    overflow-x: initial;
 }
 
 
 .output-box::-webkit-scrollbar {
     width: 10px;
+    height: 10px;
+}
+
+.output-box::-webkit-scrollbar-track {
+    background: var(--primary);
 }
 
 .output-box::-webkit-scrollbar-thumb {
@@ -95,4 +101,8 @@ button:hover {
 .output-box::-webkit-scrollbar-track {
     background-color: var(--primary);
     border-radius: 6px;
+}
+
+.output-box::-webkit-scrollbar-thumb:hover {
+    background-color: #5cc402;
 }
