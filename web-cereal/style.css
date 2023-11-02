@@ -1,3 +1,6 @@
+/* TODO make it better */
+
+
 :root {
     --text: #c3c3c3;
     --background: #151414;
@@ -79,7 +82,7 @@ button:hover {
     flex: 1;
     min-height: 800px;
     max-height: 800px;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: initial;
 }
 
