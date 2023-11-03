@@ -2,11 +2,11 @@
 
 
 :root {
-    --text: #c3c3c3;
-    --background: #151414;
-    --primary: #c2ccc2;
-    --secondary: #292929;
-    --accent: #5bbd04;
+    --text: #ded9d9;
+    --background: #171717;
+    --primary: #181818;
+    --secondary: #1c1c1e;
+    --accent: #6366f1;
 }
 
 * {
@@ -19,6 +19,10 @@ body {
     background-color: var(--background);
     color: var(--text);
     min-height: 100vh;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 16px;
+    font-weight: 400;
 
 }
 
@@ -51,25 +55,29 @@ input[type="text"] {
     background-color: var(--secondary);
     color: var(--text);
     border: none;
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: 5px;
     width: 620px;
+    font-size: 15px;
 }
 
 
 button {
     background-color: var(--accent);
-    color: var(--background);
+    color: #DED9D9;
     border: none;
     border-radius: 5px;
     padding: 0.5rem;
     padding-left: 20px;
     padding-right: 22px;
     cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    font-weight: 600;
+    font-size: 15px;
 }
 
 button:hover {
-    background-color: #5cc402;
+    background-color: #4144D3;
 }
 
 .output-box {
