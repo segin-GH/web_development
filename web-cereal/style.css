@@ -2,7 +2,7 @@
 
 
 :root {
-    --text: #ded9d9;
+    --text: #a8a5a5;
     --background: #171717;
     --primary: #181818;
     --secondary: #1c1c1e;
@@ -115,5 +115,6 @@ button:hover {
 }
 
 .output-box::-webkit-scrollbar-thumb:hover {
-    background-color: #5cc402;
+    background-color: #4144D3;
+    transition: background-color 0.2s ease-in-out;
 }
