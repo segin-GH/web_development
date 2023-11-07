@@ -1,8 +1,7 @@
-/* TODO make it better */
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-    --text: #a8a5a5;
+    --text: #ffffff70;
     --background: #171717;
     --primary: #181818;
     --secondary: #1c1c1e;
@@ -19,102 +18,105 @@ body {
     background-color: var(--background);
     color: var(--text);
     min-height: 100vh;
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    font-weight: 400;
-
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
     align-items: center;
+    min-height: 100vh;
+    /* Ensures the container is at least the height of the viewport */
+    width: 90vw;
+    /* Sets the width based on the viewport width */
+    justify-content: space-between;
+    /* Distributes space between the children */
 }
 
 .input {
     display: flex;
-    margin-bottom: 2rem;
-    width: 700px;
     align-items: center;
     justify-content: space-between;
+    height: 10vh;
+    /* Assign a fixed portion of the viewport height to the input */
+    margin-bottom: 2rem;
+    /* This will be subtracted from the 100vh in the output-box calculation */
 }
 
-h1 {
-    display: inline-block;
-    color: var(--primary);
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+.output-box {
+    background-color: var(--secondary);
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-y: auto;
+    width: 100%;
+    /* Takes the full width of its parent container */
+    height: calc(100vh - 10vh - 2rem - 1rem - 1rem);
+    /* Adjusts height to fill the space, accounting for the input height and the margins */
+    /* Adjust the 1rem subtraction to account for header and any other padding or margins */
+}
 
+/* Styles for header, other elements, and scrollbar remain the same */
+
+
+
+h1 {
+    color: var(--text);
+    font-size: 2rem;
+    margin: 1rem 0;
+    /* Combine margin-top and margin-bottom */
+}
+
+input[type="text"],
+button {
+    font-size: 12px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
 }
 
 input[type="text"] {
     background-color: var(--secondary);
     color: var(--text);
-    border: none;
-    padding: 1rem;
-    border-radius: 5px;
-    width: 620px;
-    font-size: 15px;
+    width: calc(100% - 80px);
+    /* Adjust input width to account for button */
+    margin-right: 10px;
+    /* Add margin between input and button */
 }
 
+input[type="text"]:focus {
+    outline: none;
+}
 
 button {
     background-color: var(--accent);
     color: #DED9D9;
-    border: none;
-    border-radius: 5px;
-    padding: 0.5rem;
-    padding-left: 20px;
-    padding-right: 22px;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
-    font-weight: 600;
-    font-size: 15px;
+    font-weight: 500;
+    font-family: 'roboto mono variable', sans-serif;
 }
 
 button:hover {
     background-color: #4144D3;
 }
 
-.output-box {
-    background-color: var(--secondary);
-    color: var(--text);
-    padding: 1rem;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    width: 700px;
-    flex: 1;
-    min-height: 800px;
-    max-height: 800px;
-    overflow-y: auto;
-    overflow-x: initial;
-}
 
-
+/* Scrollbar styles */
 .output-box::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 7px;
 }
 
-.output-box::-webkit-scrollbar-track {
+.output-box::-webkit-scrollbar-track,
+.output-box::-webkit-scrollbar-thumb {
     background: var(--primary);
+    border-radius: 6px;
 }
 
 .output-box::-webkit-scrollbar-thumb {
     background-color: var(--accent);
-    border-radius: 6px;
-}
-
-.output-box::-webkit-scrollbar-track {
-    background-color: var(--primary);
-    border-radius: 6px;
 }
 
 .output-box::-webkit-scrollbar-thumb:hover {
     background-color: #4144D3;
-    transition: background-color 0.2s ease-in-out;
 }
