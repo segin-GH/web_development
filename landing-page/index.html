@@ -4,11 +4,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ha Ha</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Landing</title>
 </head>
 
 <body>
-  <h1> Hello World</h1>
+  <nav class="bg-purple-900 ">
+    <ul class="px-10 py-4 flex justify-between items-center text-white">
+      <h1 class="cursor-pointer font-bold">LOGO</h1>
+      <!-- Wrap the other list items in a div -->
+      <div class="flex space-x-3">
+        <li class="cursor-pointer">HOME</li>
+        <li class="cursor-pointer">ABOUT</li>
+        <li class="cursor-pointer">CONTACT</li>
+      </div>
+    </ul>
+  </nav>
+  <main>
+    <div class="main bg-fuchsia-100 h-96 py-80 font-bold pl-9">
+      <div class="text-4xl ">
+        WELCOME TO MY WEBSITE
+      </div>
+      <div class="text-1xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+        <div class="button pt-3">
+          <button class="bg-purple-900 text-white  px-3 py-2 rounded-full hover:bg-purple-950">Get Started</button>
+          <button class="bg-purple-900 text-white  px-3 py-2 rounded-full hover:bg-purple-950">Contact Me</button>
+        </div>
+      </div>
+
+
+  </main>
 
 </body>
 
