@@ -14,3 +14,5 @@ function loadContent(page) {
       document.getElementById('content-area').innerHTML = '<p>Error loading content.</p>';
     });
 }
+
+loadContent('usb');
