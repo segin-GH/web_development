@@ -31,33 +31,41 @@
     </div>
 
     <main class="bg-clr-bg-sec h-[calc(100vh-92px)] text-clr-txt text-xs ">
-        <div class="flex h-9 m-3 m4-0 justify-between">
-            <!-- Dropdown menu for serial ports -->
-            <div id="dropdown" class=" relative flex-none w-[calc(100%-112px)]">
-                <button id="dropdownButton"
-                    class=" rounded-sm border-thin border-clr-prim bg-clr-bg-thr  p-2 h-[calc(38px-2px)] w-28">
-                    Port
-                </button>
-                <div id="dropdownMenu" class=" hidden absolute bg-clr-prim mt-1 rounded-lg w-28 ">
-                    <a href="#" class="block p-2 hover:bg-clr-bg-thr">Port 1</a>
-                    <a href="#" class="block p-2 hover:bg-clr-bg-thr">Port 2</a>
-                    <a href="#" class="block p-2 hover:bg-clr-bg-thr">Port 3</a>
-                </div>
-                <!-- Input box to send cmd -->
-                <input id="inputBox" type="text"
-                    class=" rounded-sm border-thin border-clr-prim bg-clr-bg-thr text-white p-2 h-[calc(38px-2px)] w-[calc(100%-120px)] focus:outline-none "
-                    placeholder="Enter Command">
-            </div>
-
-            <div>
-                <div id="send">
-                    <button id="sendButton"
-                        class=" bg-clr-accent  text-white font-bold font-sm rounded-sm p-2 h-[calc(38px-2px)] w-28 hover:bg-opacity-95">
-                        Send
+        <div>
+            <!-- INPUT -->
+            <div class="flex h-8 my-3 m4-0 justify-between">
+                <!-- Dropdown menu for serial ports -->
+                <div id="dropdown" class=" relative flex-none w-[calc(100%-112px)]">
+                    <button id="dropdownButton"
+                        class=" rounded-sm border-thin border-clr-prim bg-clr-bg-thr  p-2 h-[calc(38px-3px)] w-28">
+                        Port
                     </button>
+                    <div id="dropdownMenu" class=" hidden absolute bg-clr-prim mt-1 rounded-sm w-28 ">
+                        <a href="#" class="block p-2 hover:bg-clr-bg-thr">Port 1</a>
+                        <a href="#" class="block p-2 hover:bg-clr-bg-thr">Port 2</a>
+                        <a href="#" class="block p-2 hover:bg-clr-bg-thr">Port 3</a>
+                    </div>
+                    <!-- Input box to send cmd -->
+                    <input id="inputBox" type="text"
+                        class=" rounded-sm border-thin border-clr-prim bg-clr-bg-thr text-white p-2 h-[calc(38px-2px)] w-[calc(100%-120px)] focus:outline-none "
+                        placeholder="Enter Command">
+                </div>
+
+                <div>
+                    <div id="send">
+                        <button id="sendButton"
+                            class=" bg-clr-accent  text-white font-bold font-sm rounded-sm p-2 h-[calc(38px-2px)] w-28 hover:bg-opacity-95">
+                            Send
+                        </button>
+                    </div>
                 </div>
             </div>
+        </div>
 
+        <!-- OUTPUT -->
+        <div class="bg-clr-bg-thr my-3 p-2 h-[calc(100vh-150px)] border-thin rounded-sm border-clr-prim">
+            OUTPUT
+        </div>
     </main>
 
     <script src="script.js"></script>
