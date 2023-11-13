@@ -12,9 +12,13 @@ export default {
         'clr-sec': '#020617',
         'clr-accent': '#6366f1',
       },
+      borderWidth: {
+        'thin': '0.1px',
+      },
 
     },
   },
-  plugins: [],
+  plugins: [
+  ]
 }
 
