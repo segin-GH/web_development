@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Serial Port Connection</title>
+</head>
+
+<body>
+  <h1>Serial Port Connector</h1>
+  <button id="connect-btn" onclick="listPorts()">Connect to Serial Port</button>
+  <div id="port-list">
+    <!-- Available ports will be listed here -->
+  </div>
+
+  <script>
+    async function listPorts() {
+      navigator.usb.requestDevice({ filters: [{ vendorId: 0x10c4 }] })
+        .then(device => {
+          console.log(device.productName);
+          console.log(device.manufacturerName);
+        })
+        .catch(error => { console.error(error); });
+
+      navigator.usb.addEventListener("connect", (event) => {
+        console.log(event.device.productName);
+        
+      });
+    }
+
+
+  </script>
+</body>
+
+</html>
