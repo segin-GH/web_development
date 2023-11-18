@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script>
+    // Function to handle GET request
+    function getDataFromServer() {
+      fetch('http://localhost:5000/usb')
+        .then(response => response.json())
+        .then(data => {
+          console.log('Data received from the server:', data);
+          // You can also update the DOM with this data
+          document.getElementById('serverData').innerText = JSON.stringify(data, null, 2);
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    // Call the function when the window loads
+    window.onload = getDataFromServer;
+  </script>
 </head>
+
 <body>
-  
-  <script src="main.js"></script>
+  <h1>Server Data</h1>
+  <pre id="serverData">Loading data from server...</pre>
 </body>
+
 </html>
