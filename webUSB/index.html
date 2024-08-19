@@ -12,23 +12,8 @@
     <!-- Available ports will be listed here -->
   </div>
 
-  <script>
-    async function listPorts() {
-      navigator.usb.requestDevice({ filters: [{ vendorId: 0x10c4 }] })
-        .then(device => {
-          console.log(device.productName);
-          console.log(device.manufacturerName);
-        })
-        .catch(error => { console.error(error); });
+  <script src="main.js"></script>
 
-      navigator.usb.addEventListener("connect", (event) => {
-        console.log(event.device.productName);
-        
-      });
-    }
-
-
-  </script>
 </body>
 
 </html>
